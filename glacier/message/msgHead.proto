@@ -1,0 +1,7 @@
+import public "msgDefine.proto";
+
+message MessageHead
+{
+    required APP_ID appId = 1;
+    required string name = 2;
+}

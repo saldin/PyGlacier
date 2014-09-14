@@ -1,0 +1,6 @@
+ enum APP_ID
+ {
+    System = 0;
+    Auth = 1;
+    Card = 2;
+ }

@@ -1,15 +1,14 @@
 __author__ = 'cnzhao'
-from Person_pb2 import Person
-p = Person()
-p.id = 3
-p.str = "111"
+from glacier.message.msgHead_pb2 import MessageHead
+from glacier.message.msgDefine_pb2 import *
 
-str = p.SerializeToString()
+head = MessageHead()
+head.appId = System
+head.name = "1111"
 
-print(str)
+inputStr = head.SerializeToString()
 
-po = Person()
-po.ParseFromString(str)
+outputHead = MessageHead()
+outputHead.ParseFromString(inputStr)
 
-print(po.id)
-print(po.str)
+print(outputHead)
